@@ -1,18 +1,27 @@
+package dao;
+
+import jakarta.annotation.Nonnull;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
 @Entity
-public class Empresa {
+public class EmpresaDAO {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idEmpresa;
 
-    @NotNull
+    @Nonnull
     private String ruc;
 
-    @NotNull
+    @Nonnull
     private String RazonSocial;
 
+    @Nonnull
     private String direccion;
 
-    @NotNull
+    @Nonnull
     private boolean estado;
 
 
